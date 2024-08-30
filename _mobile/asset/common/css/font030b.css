@@ -1,0 +1,59 @@
+@charset "utf-8";
+/*==============================================
+
+    ----------------------------------------------------------------
+	* Date		:	2018.03.05
+	* Modify		:   
+	* Name		:	font.css
+	----------------------------------------------------------------
+	
+	- Description -
+	
+	100	:	Thin
+	200	:	Extra Light (Ultra Light)
+	300	:	Light
+	400	:	Regular
+	500	:	Medium
+	600	:	Semi Bold (Demi Bold)
+	700	:	Bold
+	800	:	Extra Bold (Ultra Bold)
+	900	:	Black (Heavy)	
+
+==============================================*/
+
+
+@font-face {
+  font-family: 'Akrobat';
+  font-style: normal;
+  font-weight:800;
+  src: url('../font/Akrobat-ExtraBold.eot');
+  src: url('../font/Akrobat-ExtraBold.woff2') format('woff2'),
+       url('../font/Akrobat-ExtraBold.woff') format('woff'),
+       url('../font/Akrobat-ExtraBold.ttf') format('truetype'),
+       url('../font/Akrobat-ExtraBold.svg#Akrobat-ExtraBold') format('svg'),
+       url('../font/Akrobat-ExtraBoldd41d.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'roboto';
+  font-style: normal;
+  font-weight:500;
+  src: url('../font/Roboto-Medium.eot');
+  src: url('../font/Roboto-Medium.woff2') format('woff2'),
+       url('../font/Roboto-Medium.woff') format('woff'),
+       url('../font/Roboto-Medium.ttf') format('truetype'),
+       url('../font/Roboto-Medium.svg#Roboto-Medium') format('svg'),
+       url('../font/Roboto-Mediumd41d.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'roboto';
+  font-style: normal;
+  font-weight:700;
+  src: url('../font/Roboto-Bold.eot');
+  src: url('../font/Roboto-Bold.woff2') format('woff2'),
+       url('../font/Roboto-Bold.woff') format('woff'),
+       url('../font/Roboto-Bold.ttf') format('truetype'),
+       url('../font/Roboto-Bold.svg#Roboto-Bold') format('svg'),
+       url('../font/Roboto-Boldd41d.eot?#iefix') format('embedded-opentype');
+}

@@ -1,0 +1,209 @@
+@charset "utf-8";
+/*==============================================
+
+    ----------------------------------------------------------------
+	* Date		:	2018.01.19
+	* Modify		:   
+	* Name		:	form.css
+	----------------------------------------------------------------
+	
+	- Description -
+
+	00. common			:	전체 공통사항
+	01. checkbox			:	checkbox 요소
+	02. radio					:	radio 요소
+	03. form					:	form 요소
+
+==============================================*/
+
+
+/* ===========================
+	00. common
+=========================== */
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=password]	{display:inline-block; width:95px; min-width:95px; max-width:100%; height:44px; padding:0 14px; color:#222; font-family:Noto Sans CJK KR, 'Noto Sans', 'Malgun Gothic', dotum, gulim, verdana, sans-serif; font-size:16px; border:1px solid #dedede; background-color:#fff; outline:0; box-sizing:border-box; vertical-align:top;transition:all 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); -webkit-transition:all 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);}
+textarea						{display:inline-block; width:100%; height:215px; padding:15px 14px; color:#222; font-family:Noto Sans CJK KR, 'Noto Sans', 'Malgun Gothic', dotum, gulim, verdana, sans-serif; font-size:16px; line-height:20px; border:1px solid #dedede; overflow:auto; resize:none; vertical-align:top; box-sizing:border-box; outline:none; transition:all 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); -webkit-transition:all 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);}
+select						{display:inline-block; width:95px; min-width:195px; max-width:100%; height:44px; padding:10px 40px 10px 14px; color:#222; font-family:Noto Sans CJK KR, 'Noto Sans', 'Malgun Gothic', dotum, gulim, verdana, sans-serif; font-size:16px; line-height:1; border:1px solid #a1a1a1; background-color:#fff; background-image:url(../../images/util/select_arrow.png); background-position:right 20px center; background-repeat:no-repeat;box-sizing:border-box; text-indent:0.01px; outline:none; -webkit-appearance: none; -moz-appearance:none; appearance: none; vertical-align:top;}
+select::-ms-expand		{display:none;}
+
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus,
+input[type=text].active,
+input[type=number].active,
+input[type=email].active,
+input[type=tel].active,
+input[type=url].active,
+input[type=password].active,
+textarea.active {color:#222; border-color:#323232; background:#fff;}
+input.bnone {border:0;}
+
+::-webkit-input-placeholder	{color: #999;}
+::-moz-placeholder				{color: #999;}
+:-ms-input-placeholder			{color: #999;}
+:-moz-placeholder				{color: #999;}
+
+*::selection {color:#fff; background:#324554;}
+*::-moz-selection {color:#fff; background:#324554;}
+
+button,
+input[type=file],
+input[type=image],
+input[type=reset],
+input[type=button],
+input[type=submit] {font-family:Noto Sans CJK KR, 'Noto Sans', 'Malgun Gothic', dotum, gulim, verdana, sans-serif; border:none; border-radius:0; background:none; cursor:pointer; -webkit-appearance:none; appearance:none;}
+button:focus,
+button:hover {outline:none;}
+
+/* jquery-ui */
+.ui-datepicker .ui-datepicker-title select {display:inline-block; min-width:0; width:40%; height:30px; padding:5px 10px; margin:0 3px; color:#222; font-size:14px; line-height:1; border:1px solid #ddd; background-color:#fff; background-image:url(../../images/util/select_arrow.png); background-position:right 10px center; background-repeat:no-repeat; vertical-align:middle; -webkit-appearance:inherit; appearance:inherit}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {top:4px;}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {top:3px;}
+
+.datepicker-input {position:relative; display:inline-block;}
+.datepicker-input > img {position:absolute; top:50%; right:20px; width:20px; height:22px; margin-top:-11px; cursor:pointer;}
+
+
+/* ===========================
+	01. checkbox
+=========================== */
+.chk-type01 {position:relative; display:inline-block; margin-right:17px; height:22px; line-height:22px;}
+.chk-type01 input[type=checkbox] {position:absolute; top:0; left:0; width:0; height:0; opacity:0; filter:alpha(opacity=0);}
+.chk-type01 input[type=checkbox] + label {display:inline-block; color:#666; font-size:14px; line-height:22px; cursor:pointer;}
+.chk-type01 input[type=checkbox] + label span {display:inline-block; width:22px; height:22px; margin-right:10px; border:1px solid #a3a3a3; background-color:#fff; background-image:url('../../images/icon/ico_chk01.png'); background-repeat:no-repeat; background-position:center -22px; box-sizing:border-box;}
+.chk-type01 input[type=checkbox]:checked + label span {background-position:center center;}
+
+
+
+/* ===========================
+	02. radio 
+=========================== */
+.radio-type01 {position:relative; display:inline-block; margin-right:17px; height:22px; line-height:22px;}
+.radio-type01 input[type=radio] {position:absolute; top:0; left:0; width:0; height:0; opacity:0; filter:alpha(opacity=0);}
+.radio-type01 input[type=radio] + label {display:inline-block; color:#666; font-size:14px; line-height:22px; cursor:pointer;}
+.radio-type01 input[type=radio] + label span {position:relative; display:inline-block; width:22px; height:22px; margin-right:10px; border:1px solid #a5a5a5; border-radius:11px; background-color:#fff; box-sizing:border-box; transition:all 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); -webkit-transition:all 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);}
+.radio-type01 input[type=radio] + label span:after {content:''; position:absolute; top:50%; left:50%; display:block; width:0; height:0; margin-top:0; margin-left:0; border-radius:5px; background-color:#fff; transition:all 0.2s ease-out; -webkit-transition:all 0.2s ease-out;}
+.radio-type01 input[type=radio]:checked + label span {border-color:#a5a5a5;}
+.radio-type01 input[type=radio]:checked + label span:after {width:8px; height:8px; margin-top:-4px; margin-left:-4px; background-color:#cb0000;}
+
+
+/* ===========================
+	03. form 
+=========================== */
+/* 여러개 입력 */
+.input-mulity > input {margin-left:5px;}
+.input-mulity > input:first-child {margin-left:0;}
+
+/* 라벨 있는 입력 */
+.label-input {position:relative; display:inline-block;}
+.label-input > label {margin-right:10px; color:#666; font-size:14px; line-height:44px;}
+
+/* 라벨 있는 입력 여러개 있을경우*/
+.label-input-mulity .label-input {margin-right:20px;}
+
+/* 선택창 여러개 있을 경우 */
+.select-mulity:after {content:''; display:block; clear:both;}
+.select-mulity > p {float:left; display:block; margin-left:10px;}
+.select-mulity > p:first-child {margin-left:0;}
+/* ▼▼▼ 20210726 추가:s ▼▼▼ */
+.select-mulity .cell {float:left; display:block; margin-left:10px;}
+.select-mulity .cell:nth-of-type(1) {margin-left:0;}
+/* ▲▲▲ 20210726 추가:e ▲▲▲ */
+
+
+/* 라벨 있는 선택창 */
+.label-select {position:relative; display:inline-block;}
+.label-select > label {margin-right:10px; color:#666; font-size:14px; line-height:44px;}
+
+/* 라벨 있는 선택창이 여러개 있을 경우 */
+.label-select-mulity .label-select {margin-right:20px;}
+
+/* 아이디 */
+.id-input > a,
+.id-input > button,
+.id-input > input[type=submit] {margin-left:7px;}
+.id-input .input-value {display:inline-block; line-height:44px;}
+
+/* 연락처 */
+.phone-wrap {overflow:hidden;}
+.phone-wrap > div {position:relative; float:left; padding-left:19px;}
+.phone-wrap > div:first-child {padding-left:0;}
+.phone-wrap > div:first-child:after {display:none;}
+.phone-wrap > div:after {content:''; position:absolute; top:50%; left:5px; display:block; width:9px; height:1px; background-color:#999;}
+.phone-wrap select,
+.phone-wrap input {width:144px; min-width:144px;}
+
+/* 이메일 */
+.email-input {overflow:hidden;}
+.email-input > div {position:relative; float:left; padding-right:10px;}
+.email-input > div:first-child {padding-right:25px;}
+.email-input > div:first-child:after {content:'@'; position:absolute; top:0; right:0; display:block; width:25px; height:44px; color:#999; font-size:16px; line-height:44px; text-align:center;}
+.email-input > a,
+.email-input > button,
+.email-input > input[type=submit] {float:left; margin:0;}
+.email-input input[type=text] {width:235px; min-width:235px;}
+.email-input select {width:auto; min-width:95px;}
+
+/* 생년월일 */
+.birthday-input {overflow:hidden;}
+.birthday-input > div {float:left; margin-left:10px;}
+.birthday-input > div:first-child {margin-left:0;}
+.birthday-input .info {display:inline-block; margin-left:7px; color:#666; font-size:16px; line-height:44px;}
+
+/* 주소입력 */
+.address-input .zip-input > a,
+.address-input .zip-input > button,
+.address-input .zip-input > input[type=submit] {margin-left:7px;}
+.address-input .txt-input {margin-top:15px; overflow:hidden;}
+.address-input .txt-input > p {float:left; margin-left:10px;}
+.address-input .txt-input > p:first-child {margin-left:0;}
+
+/* 카드 번호 */
+.card-num-input {overflow:hidden;}
+.card-num-input > div {position:relative; float:left; padding-left:19px;}
+.card-num-input > div:first-child {padding-left:0;}
+.card-num-input > div:first-child:after {display:none;}
+.card-num-input > div:after {content:''; position:absolute; top:50%; left:5px; display:block; width:9px; height:1px; background-color:#999;}
+.card-num-input > a,
+.card-num-input > button,
+.card-num-input > input[type=submit] {float:left; margin-left:10px;}
+
+/* 파일 업로드 */
+.file-input {position:relative; padding-right:105px;}
+.file-input .input-file {position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; z-index:50; cursor:pointer;}
+.file-input .read-file {width:100%; text-decoration:underline;}
+.file-input > a,
+.file-input > button,
+.file-input > input[type=submit] {position:absolute; top:0; right:0; width:95px; height:42px; font-size:16px; line-height:42px; text-align:center;}
+.file-input .btn-file.type-01 {color:#fff; border:1px solid #cb0000; background-color:#cb0000;}
+.file-input .btn-file.type-02 {color:#fff; border:1px solid #8f8f8f; background-color:#8f8f8f;}
+.file-input .btn-file.type-03 {color:#fff; border:1px solid #282828; background-color:#282828;}
+
+.add-input {margin-top:10px;}
+.add-input:first-child {margin-top:0;}
+
+.add-file {position:relative; padding-right:98px; overflow:hidden;}
+.add-file .file_info {margin-left:20px; padding:3px 0; overflow:hidden;}
+.add-file .file_info > div {float:left;}
+.add-file .file_info .data_info {color:#999; font-size:13px; line-height:26px;}
+.add-file .btn-ui {position:absolute; top:50%; right:0; margin-top:-20px; width:83px; overflow:hidden;}
+.add-file .btn-ui > a {position:relative; float:left; display:block; width:50%; height:40px; margin-left:-1px; background:#fff; border:1px solid #ccc; box-sizing:border-box;}
+.add-file .btn-ui > a:first-child {margin-left:0; border-top-left-radius:2px; border-bottom-left-radius:2px;}
+.add-file .btn-ui > a:last-child {border-top-right-radius:2px; border-bottom-right-radius:2px;}
+.add-file .btn-ui > a.btn-add:before {content:''; position:absolute; top:50%; left:50%; width:2px; height:14px; margin:-7px 0 0 -1px; background:#8f8f8f;}
+.add-file .btn-ui > a.btn-add:after {content:''; position:absolute; top:50%; left:50%; width:14px; height:2px; margin:-1px 0 0 -7px; background:#8f8f8f;}
+.add-file .btn-ui > a.btn-del:after {content:''; position:absolute; top:50%; left:50%; width:14px; height:2px; margin:-1px 0 0 -7px; background:#8f8f8f;}
+
+
+/* 입력 하단 설명글 */
+.form-bottom-info {margin-top:10px; color:#999; font-size:14px; line-height:21px;}

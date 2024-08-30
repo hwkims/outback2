@@ -1,0 +1,25 @@
+<script type="text/javascript">
+//<![CDATA[
+	alert("로그인 후 이용 가능합니다.");
+	if( "" == "popup" ){
+		if ( "/main.do?menuIdx=137" == "" ) {
+			window.close();
+			opener.history.back();
+		}else if ("/main.do?menuIdx=137" == "none") {
+
+		}else{
+			window.close();
+			opener.location.replace("../login/login503e.html?menuIdx=137");
+		}
+	}else{
+		if ( "/main.do?menuIdx=137" == "" ) {
+			history.back();
+		}else if ("/main.do?menuIdx=137" == "none") {
+
+		}else{
+			location.replace("../login/login503e.html?menuIdx=137");
+		}
+	}
+	
+// ]]>
+</script>
